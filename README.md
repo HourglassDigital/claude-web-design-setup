@@ -187,3 +187,10 @@ Then run /impeccable critique and fix the top three issues it finds.
 | awesome-design-md | No clear style. Gives Claude a full design system to follow |
 | Playwright CLI | Claude can't see what it built. Now it screenshots and checks |
 | Figma MCP (optional) | Rebuilding Figma designs by hand. Claude reads the file directly |
+
+---
+
+## More from Hourglass AI
+
+- **More free playbooks and Claude skills:** [thehourglass.ai/open-sauce](https://thehourglass.ai/open-sauce)
+- **Want this done across your whole business?** The [AI Audit](https://thehourglass.ai/products/ai-audit) maps every AI opportunity in your company and ranks what to build first.
