@@ -1,6 +1,6 @@
 # The free Claude web design setup we use
 
-From the team at [Hourglass AI](https://thehourglass.ai). One script installs all five.
+From the team at [Hourglass AI](https://thehourglass.ai/?utm_source=instagram&utm_medium=freebie-design). One script installs all five.
 
 ## Quick install
 
@@ -192,5 +192,5 @@ Then run /impeccable critique and fix the top three issues it finds.
 
 ## More from Hourglass AI
 
-- **More free playbooks and Claude skills:** [thehourglass.ai/open-sauce](https://thehourglass.ai/open-sauce)
-- **Want this done across your whole business?** The [AI Audit](https://thehourglass.ai/products/ai-audit) maps every AI opportunity in your company and ranks what to build first.
+- **More free playbooks and Claude skills:** [thehourglass.ai/open-sauce](https://thehourglass.ai/open-sauce?utm_source=instagram&utm_medium=freebie-design)
+- **Want this done across your whole business?** The [AI Audit](https://thehourglass.ai/products/ai-audit?utm_source=instagram&utm_medium=freebie-design) maps every AI opportunity in your company and ranks what to build first.
