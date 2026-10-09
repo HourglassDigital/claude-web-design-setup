@@ -1,0 +1,36 @@
+# install.sh is piped to bash by strangers straight from main, so it is checked
+# before it can merge: it must parse, and shellcheck must find nothing.
+#
+# This repo is public, so it cannot call the private stack's reusable gates
+# workflow. This file is self-contained and runs nothing from install.sh itself
+# (that script installs packages with npx).
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  shellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: install.sh parses
+        run: bash -n install.sh
+      - name: shellcheck install.sh
+        run: shellcheck --severity=style install.sh
+      - name: the check fails on a known defect (red-proof)
+        # A check that cannot fail proves nothing. Feed shellcheck an unquoted
+        # expansion and require it to object; if it passes, the step above
+        # is not looking.
+        run: |
+          printf '#!/usr/bin/env bash\nrm -rf $HOME/$1\n' > "$RUNNER_TEMP/defect.sh"
+          if shellcheck --severity=style "$RUNNER_TEMP/defect.sh" >/dev/null; then
+            echo "shellcheck passed a known-bad script; the check is not working" >&2
+            exit 1
+          fi
+          echo "shellcheck rejected the known-bad script, as it should"
